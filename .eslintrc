@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "extends": ["standard", "standard-react"],
+  "globals": {
+    "localStorage": true,
+    "fetch": true
+  },
+  "plugins": [
+    "react",
+    "babel"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-new": "off",
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "no-console": "off"
+  }
+}
