@@ -6,6 +6,7 @@ export const TableList = styled.ul`
   margin: 0;
   padding-left: 0;
   color: #123a22;
+  list-style: none;
 
   a {
     color: inherit;
