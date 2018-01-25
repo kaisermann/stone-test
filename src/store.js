@@ -19,6 +19,7 @@ function loadState() {
 }
 
 function saveState(state) {
+  console.log('save state')
   try {
     const serializedState = JSON.stringify(state)
     localStorage.setItem('state', serializedState)
@@ -36,7 +37,8 @@ if (window.__REDUX_DEVTOOLS_EXTENSION__) {
  * state loaded from localStorage (if exists)
  * composed middlewares
  */
-localStorage.clear()
+
+// localStorage.clear()
 const store = createStore(rootReducer, loadState(), compose(...middlewares))
 
 /** Save the state for each dispatch */

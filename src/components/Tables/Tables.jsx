@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
 import NavBar from '../NavBar/NavBar'
 import PageWrapper from '../PageWrapper'
 import { TableList, TableListItem } from './StyledComponents'

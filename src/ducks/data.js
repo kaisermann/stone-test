@@ -12,7 +12,7 @@ export const types = {
 /* Action creators */
 export const actions = {
   loadData: () => {
-    return async dispatch => {
+    return async (dispatch, getState) => {
       const payload = await import('../default-data.json')
       const { products, tables } = payload
       dispatch(productActions.populate(products))

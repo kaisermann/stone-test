@@ -5,15 +5,14 @@ import { actions as dataActions } from '../../ducks/data'
 import Tables from '../Tables/Tables'
 import Table from '../Table/Table'
 
-class NoMatch extends Component {
-  render() {
-    return <div style={{ color: 'white' }}>404</div>
-  }
-}
-
 class App extends Component {
-  componentWillMount() {
-    this.props.loadData()
+  constructor(props) {
+    super(props)
+
+    // If we already have the default table data, do nothing
+    if (!this.props.tables.length) {
+      this.props.loadData()
+    }
   }
 
   render() {
@@ -23,7 +22,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Tables} />
             <Route path="/table/:id" component={Table} />
-            <Route component={NoMatch} />
           </Switch>
         </BrowserRouter>
       </div>
@@ -33,7 +31,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state.data,
+    tables: state.tables,
   }
 }
 

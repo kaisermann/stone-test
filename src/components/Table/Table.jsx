@@ -24,10 +24,6 @@ class Table extends Component {
     status: null,
   }
 
-  constructor(props) {
-    super(props)
-  }
-
   changeStatus(status) {
     if (this.state.status === status) {
       status = null
