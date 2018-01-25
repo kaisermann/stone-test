@@ -8,13 +8,10 @@ import store from './store'
 import './index.css'
 
 import App from './containers/App/App'
-import Mockup from './components/Mockup/Mockup'
 
 ReactDOM.render(
   <Provider store={store}>
-    <Mockup>
-      <App />
-    </Mockup>
+    <App />
   </Provider>,
   document.getElementById('root')
 )
