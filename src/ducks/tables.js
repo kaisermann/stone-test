@@ -1,5 +1,8 @@
 import { createAction } from 'redux-actions'
 
+/* Initial State */
+export const initialState = []
+
 /* Action types */
 export const types = {
   TABLES_POPULATE: 'TABLES/POPULATE',
@@ -47,9 +50,6 @@ export const selectors = {
     return tables.map(table => getTableWithInfos(products, table))
   },
 }
-
-/* Initial State */
-export const initialState = []
 
 /* Reducer */
 /** Here state indicates the tables list */

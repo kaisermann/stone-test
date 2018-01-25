@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Uni Neue';
+  src: url(./fonts/unineue-bold.woff2) format('woff2'),
+    url(./fonts/unineue-bold.woff) format('woff'),
+    url(./fonts/unineue-bold.otf) format('opentype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Uni Neue';
+  src: url(./fonts/unineue-regular.woff2) format('woff2'),
+    url(./fonts/unineue-regular.woff) format('woff'),
+    url(./fonts/unineue-regular.otf) format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
 *,
 *::before,
 *::after {
@@ -9,7 +27,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Uni Neue, sans-serif;
 }
 
 a {
