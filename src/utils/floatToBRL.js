@@ -1,9 +1,7 @@
 export default number => {
   if (number == null) return NaN
 
-  number = typeof number === 'string' ? parseFloat(number) : number
-
-  return `R$ ${number
+  return `R$ ${Number(number)
     .toFixed(2)
     .toString()
     .replace('.', ',')}`
