@@ -27,12 +27,13 @@ export default class PaymentAdddition extends Component {
   state = { value: 0.0 }
 
   addPayment() {
+    const { tableID } = this.props
     const value = parseFloat(this.state.value.toString().replace(',', '.'))
 
     if (value === 0.0) return
 
     this.props.addPayment({
-      tableID: this.props.tableID,
+      tableID,
       value,
     })
 

@@ -35,11 +35,10 @@ const ProductListItem = styled.li`
 
 export default class ProductAddition extends Component {
   addProduct(productID) {
-    this.props.addProduct({
-      tableID: this.props.tableID,
-      productID: productID,
-    })
+    const { tableID } = this.props
+    this.props.addProduct({ tableID, productID })
   }
+
   render() {
     const productListItems = this.props.products.map((product, i) => (
       <ProductListItem key={i} onClick={() => this.addProduct(product.id)}>
