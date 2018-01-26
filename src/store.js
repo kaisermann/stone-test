@@ -19,7 +19,6 @@ function loadState() {
 }
 
 function saveState(state) {
-  console.log('save state')
   try {
     const serializedState = JSON.stringify(state)
     localStorage.setItem('state', serializedState)
