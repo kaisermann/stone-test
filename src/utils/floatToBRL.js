@@ -3,6 +3,5 @@ export default number => {
 
   return `R$ ${Number(number)
     .toFixed(2)
-    .toString()
     .replace('.', ',')}`
 }
